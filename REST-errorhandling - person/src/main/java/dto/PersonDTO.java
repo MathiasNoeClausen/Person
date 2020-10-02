@@ -35,6 +35,14 @@ public class PersonDTO {
         this.created = new Date();
         this.lastEdited = new Date();
     }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
     
     
 

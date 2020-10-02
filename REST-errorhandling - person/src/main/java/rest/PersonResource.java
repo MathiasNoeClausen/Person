@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
 
 @Path("person")
 public class PersonResource {
-private PersonDTO aPerson = FACADE.addPerson("Mikkel", "Clausen", "12345678");
+//private PersonDTO aPerson = FACADE.addPerson("Mikkel", "Clausen", "12345678");
 
 
 
@@ -48,20 +48,20 @@ private PersonDTO aPerson = FACADE.addPerson("Mikkel", "Clausen", "12345678");
         PersonDTO personById = FACADE.getPerson(id);
         return personById;
     }
-    @Path("ny")
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getPerson() {
-        return GSON.toJson(aPerson);
-    }
-   
-   @POST
-   @Consumes(MediaType.APPLICATION_JSON)
-   @Produces(MediaType.APPLICATION_JSON)
-   public Response addPerson(String person) {
-       aPerson = GSON.fromJson(person, PersonDTO.class);
-       return Response.ok(aPerson).build();
-   } 
+//    @Path("ny")
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public String getPerson() {
+//        return GSON.toJson(aPerson);
+    //}
+//   
+//   @POST
+//   @Consumes(MediaType.APPLICATION_JSON)
+//   @Produces(MediaType.APPLICATION_JSON)
+//   public Response addPerson(String person) {
+//       aPerson = GSON.fromJson(person, PersonDTO.class);
+//       return Response.ok(aPerson).build();
+//   } 
     
     
 //    Hvis disse 2 endpoints ikke er udkommenteret virker hele mit program ikke, synes ellers de ser rigtige nok ud 
