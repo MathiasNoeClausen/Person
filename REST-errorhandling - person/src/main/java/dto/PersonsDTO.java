@@ -1,6 +1,6 @@
-package dto;
+package cors.dto;
 
-import entities.Person;
+import cors.entities.Person;
 import java.util.ArrayList;
 import java.util.List;
 

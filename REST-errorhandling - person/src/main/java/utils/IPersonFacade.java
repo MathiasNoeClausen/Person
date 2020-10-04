@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
-import dto.PersonDTO;
-import dto.PersonsDTO;
-import exceptions.PersonNotFoundException;
+package cors.utils;
+import cors.dto.PersonDTO;
+import cors.dto.PersonsDTO;
+import cors.exceptions.PersonNotFoundException;
 
 /**
  *

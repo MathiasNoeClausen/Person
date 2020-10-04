@@ -1,10 +1,10 @@
-package dto;
+package cors.dto;
 
-import entities.Address;
+import cors.entities.Address;
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import entities.Person;
+import cors.entities.Person;
 
 public class PersonDTO {
     private long id;

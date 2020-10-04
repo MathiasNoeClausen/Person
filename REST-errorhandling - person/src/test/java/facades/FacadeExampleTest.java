@@ -1,7 +1,8 @@
 package facades;
 
-import utils.EMF_Creator;
-import entities.Person;
+import cors.facades.PersonFacade;
+import cors.utils.EMF_Creator;
+import cors.entities.Person;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.AfterAll;

@@ -1,4 +1,4 @@
-package entities;
+package cors.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,7 +12,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import entities.Address;
+import cors.entities.Address;
 
 
 @Entity

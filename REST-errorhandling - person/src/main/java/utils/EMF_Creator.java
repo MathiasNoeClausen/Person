@@ -1,4 +1,4 @@
-package utils;
+package cors.utils;
 
 import java.util.Properties;
 import javax.persistence.EntityManagerFactory;

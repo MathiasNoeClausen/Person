@@ -1,28 +1,21 @@
 package rest;
 
-import dto.PersonDTO;
-import entities.Person;
-import utils.EMF_Creator;
+import rest.ApplicationConfig;
+import cors.entities.Person;
+import cors.utils.EMF_Creator;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 import io.restassured.parsing.Parser;
 import java.net.URI;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.core.UriBuilder;
 import org.glassfish.grizzly.http.server.HttpServer;
-import org.glassfish.grizzly.http.util.HttpStatus;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.hasItems;
-import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 //Uncomment the line below, to temporarily disable this test
 //@Disabled

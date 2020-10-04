@@ -2,11 +2,11 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dto.PersonDTO;
-import dto.PersonsDTO;
-import exceptions.PersonNotFoundException;
-import utils.EMF_Creator;
-import facades.PersonFacade;
+import cors.dto.PersonDTO;
+import cors.dto.PersonsDTO;
+import cors.exceptions.PersonNotFoundException;
+import cors.utils.EMF_Creator;
+import cors.facades.PersonFacade;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

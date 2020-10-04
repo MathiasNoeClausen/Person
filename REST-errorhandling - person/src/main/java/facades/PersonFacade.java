@@ -1,10 +1,10 @@
-package facades;
+package cors.facades;
 
-import dto.PersonDTO;
-import dto.PersonsDTO;
-import entities.Address;
-import entities.Person;
-import exceptions.PersonNotFoundException;
+import cors.dto.PersonDTO;
+import cors.dto.PersonsDTO;
+import cors.entities.Address;
+import cors.entities.Person;
+import cors.exceptions.PersonNotFoundException;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -13,7 +13,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.NotFoundException;
-import utils.IPersonFacade;
+import cors.utils.IPersonFacade;
 
 public class PersonFacade implements IPersonFacade {
 

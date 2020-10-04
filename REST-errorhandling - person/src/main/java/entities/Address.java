@@ -1,5 +1,5 @@
 
-package entities;
+package cors.entities;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
