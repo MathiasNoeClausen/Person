@@ -18,8 +18,7 @@ public class Address implements Serializable {
     private String street;
     private int zip;
     private String city;
-    @OneToOne(mappedBy = "address")
-    private Person person;
+
 
     public Address() {
     }
@@ -29,15 +28,6 @@ public class Address implements Serializable {
         this.zip = zip;
         this.city = city;
     }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-    
     
 
     public String getStreet() {

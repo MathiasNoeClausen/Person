@@ -12,8 +12,8 @@ import exceptions.PersonNotFoundException;
  *
  * @author maddy
  */
-public interface IPersonFacade {
-      public PersonDTO addPerson(String fName, String lName, String phone);  
+public interface IPersonFacade { 
+  //public PersonDTO addPerson(String fName, String lName, String phone);  
   public PersonDTO deletePerson(long id) throws PersonNotFoundException;  
   public PersonDTO getPerson(long id) throws PersonNotFoundException;  
   public PersonsDTO getAllPersons();  

@@ -7,7 +7,7 @@ import javax.persistence.TemporalType;
 import entities.Person;
 
 public class PersonDTO {
-    private Long id;
+    private long id;
     private String firstName;
     private String lastName;
     private String phone;
@@ -20,6 +20,7 @@ public class PersonDTO {
     public PersonDTO() {
     }
     public PersonDTO(Person person) {
+        this.id = person.getId();
         this.firstName = person.getFirstName();
         this.lastName = person.getLastName();
         this.phone = person.getPhone();
@@ -46,11 +47,11 @@ public class PersonDTO {
     
     
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

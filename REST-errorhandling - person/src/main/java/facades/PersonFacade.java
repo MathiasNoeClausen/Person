@@ -35,9 +35,9 @@ public class PersonFacade implements IPersonFacade {
         return emf.createEntityManager();
     }
 
-//    public static void main(String[] args) {
-//        insertData();
-//    }
+    public static void main(String[] args) {
+        insertData();
+    }
 
     public static void insertData() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
@@ -80,23 +80,23 @@ public class PersonFacade implements IPersonFacade {
 //
 //    }
 
-//    @Override
-//    
-//    public PersonDTO deletePerson(long id) throws PersonNotFoundException {
-//        EntityManager em = emf.createEntityManager();
-//        Person person = em.find(Person.class, id);
-//        if(person == null) {
-//            throw new PersonNotFoundException(String.format("Person with id: (%id) not found", id));
-//        }
-//        try {
-//            em.getTransaction().begin();
-//            em.remove(person);
-//            em.getTransaction().commit();
-//        } finally {
-//            em.close();
-//        }
-//        return new PersonDTO(person);
-//    }
+    @Override
+    
+    public PersonDTO deletePerson(long id) throws PersonNotFoundException {
+        EntityManager em = emf.createEntityManager();
+        Person person = em.find(Person.class, id);
+        if(person == null) {
+            throw new PersonNotFoundException(String.format("Person with id: (%id) not found", id));
+        }
+        try {
+            em.getTransaction().begin();
+            em.remove(person);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+        return new PersonDTO(person);
+    }
 
     @Override
     public PersonDTO getPerson(long id) throws PersonNotFoundException {
@@ -108,28 +108,28 @@ public class PersonFacade implements IPersonFacade {
         return new PersonDTO(person);
     }
 
-//    @Override
-//    public PersonDTO editPerson(PersonDTO p) throws PersonNotFoundException {
-//        EntityManager em = emf.createEntityManager();
-//        Person person = em.find(Person.class, p.getId());
-//        if(person == null) {
-//            throw new PersonNotFoundException(String.format("Person with id: (%d) not found", p.getId()));
-//        }
-//            person.setFirstName(p.getFirstName());
-//            person.setLastName(p.getLastName());
-//            person.setPhone(p.getPhone());
-//        try {
-//            em.getTransaction().begin();
-//            em.merge(person);
-//            em.getTransaction().commit();
-//            
-//            return new PersonDTO(person);
-//        } finally {
-//            em.close();
-//        }
+    @Override
+    public PersonDTO editPerson(PersonDTO p) throws PersonNotFoundException {
+        EntityManager em = emf.createEntityManager();
+        Person person = em.find(Person.class, p.getId());
+        if(person == null) {
+            throw new PersonNotFoundException(String.format("Person with id: (%d) not found", p.getId()));
+        }
+            person.setFirstName(p.getFirstName());
+            person.setLastName(p.getLastName());
+            person.setPhone(p.getPhone());
+        try {
+            em.getTransaction().begin();
+            em.merge(person);
+            em.getTransaction().commit();
+            
+            return new PersonDTO(person);
+        } finally {
+            em.close();
+        }
         
         
-    //}
+    }
 
     @Override
     public PersonsDTO getAllPersons() {
